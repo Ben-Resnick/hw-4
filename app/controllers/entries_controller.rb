@@ -24,6 +24,9 @@ class EntriesController < ApplicationController
       @entry["place_id"] = params["place_id"]
       @entry["user_id"] = session["user_id"] 
 
+      @entry.uploaded_image.attach(params["uploaded_image"])
+
+
       if @entry.save
         redirect_to "/places/#{@entry["place_id"]}", notice: "Entry created successfully!"
       else
