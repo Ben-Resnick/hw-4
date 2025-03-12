@@ -1,5 +1,8 @@
 <h1>Entries</h1>
 
+
+
+<p>Debug: Showing entries for user ID <%= session["user_id"] %></p>
 <ul>
   <% if @entries.any? %>
     <% @entries.each do |entry| %>
@@ -8,7 +11,7 @@
       </li>
     <% end %>
   <% else %>
-    <li class="text-muted">No entries yet.</li>
+    <li class="text-muted">No entries yet</li>
   <% end %>
 </ul>
 
