@@ -1,7 +1,5 @@
 <h1>Entries</h1>
 
-
-
 <ul>
   <% if @entries.any? %>
     <% @entries.each do |entry| %>
@@ -11,9 +9,9 @@
         <% if entry.uploaded_image.attached? %>
           <br>
           <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid" style="max-width: 200px;">
+        <% else %>
+          <p class="text-muted">No image uploaded.</p>
         <% end %>
-
-
 
       </li>
     <% end %>
@@ -22,8 +20,6 @@
   <% end %>
 </ul>
 
-
 <div class="text-center mt-3 mb-4"> 
   <%= link_to "New Entry", new_entry_path, class: "btn btn-outline-dark" %>
 </div>
-
