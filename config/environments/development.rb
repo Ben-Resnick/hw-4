@@ -69,7 +69,7 @@ Rails.application.configure do
   config.web_console.whiny_requests = false
 
 
-  Rails.application.routes.default_url_options[:host] = "https://3000-benresnick-hw4-z7vqxzbcstb.ws-us118.gitpod.io"
+  #Rails.application.routes.default_url_options[:host] = "https://3000-benresnick-hw4-z7vqxzbcstb.ws-us118.gitpod.io"
 
   config.active_storage.service = :local
 
